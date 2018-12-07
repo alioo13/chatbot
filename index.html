@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title><script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">var SMARTLY_APP_ID = "5c09ea3e2cf7d917c5be2599";var SMARTLY_LANG = "fr-fr";var SMARTLY_USER_DATA={};(function(){d=document;s=d.createElement("script");s.src="https://cdn.smartly.ai/webchat.min.js" + "?ts=" + new Date().getTime();s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+<body>
+    <img id="gif" style="display:none; width: 500px; margin:auto" src="giphy.gif" alt="" srcset="">
+
+</body>
+
+</html>
+<script>
+    var world = '';
+   setTimeout(() => {
+       
+    document.getElementById("smartly_webchat_iframe").contentDocument.addEventListener('keyup', (e) => {
+        world += e.key;
+        console.log(world);
+        if(world.substring(world.length - 4, world.length) === 'lama') {
+            setTimeout(()=> {
+                document.getElementById('gif').style.display = 'block';
+            },500)
+        }
+      });
+   }, 1500);
+    </script>
